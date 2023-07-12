@@ -14,7 +14,7 @@
                     </time>
                 </div>
 
-                <ol class="relative border-l">
+                <ol class="relative border-l-2 border-gray-400">
                     <li
                         :key="index"
                         v-for="(event, index) in schedule['Day 1']"
@@ -26,7 +26,7 @@
                         }"
                     >
                         <div
-                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                            class="absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-1.5 border border-gray-200"
                         ></div>
                         <span
                             v-if="event.state != 'SCHEDULED'"
