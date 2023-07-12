@@ -26,7 +26,7 @@
                         }"
                     >
                         <div
-                            class="absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-1.5 border border-gray-200"
+                            class="absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-[0.42rem] border border-gray-100"
                         ></div>
                         <span
                             v-if="event.state != 'SCHEDULED'"
