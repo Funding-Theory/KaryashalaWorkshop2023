@@ -5,9 +5,11 @@
 
         <div class="relative flex justify-center items-top min-h-screen bg-gray-50 bg-design">
             <div class="w-full px-4 py-8 sm:px-6 lg:px-8 lg:mx-52">
-                <div class="p-4 flex justify-center w-full border rounded-lg bg-white mb-4 w-36">
-                    <time class="text-lg font-semibold text-gray-900">
-                        <!-- July 13th, 2023 -->
+                <div
+                    class="p-4 flex flex-col items-center content-center justify-center w-full rounded-lg bg-sky-100 drop-shadow mb-4 w-full"
+                >
+                    <div class="text-base font-bold text-sky-800">Day 1</div>
+                    <time class="text-xl text-sky-800">
                         {{ $dayjs().format('DD MMM, YYYY') }}
                     </time>
                 </div>
@@ -42,7 +44,10 @@
                             {{ $dayjs(event.end_time).format('hh:mm A') }}
                         </time>
 
-                        <h4 v-if="event.place" class="block mb-2 text-sm font-normal leading-none text-blue-500">
+                        <h4
+                            v-if="event.place"
+                            class="block mt-1 mb-2 text-sm font-normal leading-none text-blue-500"
+                        >
                             Location: {{ event.place }}
                         </h4>
 
@@ -53,6 +58,10 @@
                         <h3 class="text-sm text-gray-800">
                             {{ event.subtitle }}
                         </h3>
+
+                        <div class="text-sm text-red-800" v-if="event.presenters">
+                            Presenter: {{ event.presenters }}
+                        </div>
 
                         <!--           <span
             class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
@@ -77,21 +86,21 @@ export default {
                     title: 'Registration',
                     subtitle: '',
                     presenters: '',
-                    start_time: '2023-07-13 08:30',
-                    end_time: '2023-07-13 09:00',
+                    start_time: '2023-07-13 08:15',
+                    end_time: '2023-07-13 08:50',
                     type: 'EVENT',
                     place: '',
-                    state: 'COMPLETED',
+                    state: 'SCHEDULED',
                 },
                 {
-                    title: 'Inauguration',
+                    title: 'Inauguration Ceremony',
                     subtitle: '',
                     presenters: '',
                     start_time: '2023-07-13 09:00',
                     end_time: '2023-07-13 11:00',
                     type: 'EVENT',
                     place: '',
-                    state: 'COMPLETED',
+                    state: 'SCHEDULED',
                 },
                 {
                     title: 'Tea Break',
@@ -101,12 +110,12 @@ export default {
                     end_time: '2023-07-13 11:30',
                     type: 'BREAK',
                     place: '',
-                    state: 'IN PROGRESS',
+                    state: 'SCHEDULED',
                 },
                 {
                     title: 'Overview of NGS Technologies',
                     subtitle: '(Platforms, Chemistry, library preparation)',
-                    presenters: '',
+                    presenters: 'Arindam Maitra',
                     start_time: '2023-07-13 11:30',
                     end_time: '2023-07-13 13:00',
                     type: 'EVENT',
@@ -126,7 +135,7 @@ export default {
                 {
                     title: 'Statistics',
                     subtitle: '(Probability, Distributions, Tests of significance)',
-                    presenters: '',
+                    presenters: 'Analabha Basu',
                     start_time: '2023-07-13 14:00',
                     end_time: '2023-07-13 16:30',
                     type: 'EVENT',
@@ -136,7 +145,7 @@ export default {
                 {
                     title: 'Challenges in handling high-throughput sequencing data',
                     subtitle: '(Data transfer, storage, archive and analysis)',
-                    presenters: '',
+                    presenters: 'Nidhan K. Biswas',
                     start_time: '2023-07-13 16:30',
                     end_time: '2023-07-13 17:00',
                     type: 'EVENT',
@@ -156,7 +165,7 @@ export default {
                 {
                     title: 'Linux : Introduction to the command line [Hands on]',
                     subtitle: '(Data transfer, storage, archive and analysis)',
-                    presenters: '',
+                    presenters: 'Nidhan K. Biswas and team',
                     start_time: '2023-07-13 17:30',
                     end_time: '2023-07-13 19:00',
                     type: 'EVENT',
