@@ -8,7 +8,7 @@
                 <div
                     class="p-4 flex flex-col items-center content-center justify-center w-full rounded-lg bg-sky-100 drop-shadow mb-4 w-full"
                 >
-                    <div class="text-base font-bold text-sky-800">Day 1</div>
+                    <div class="text-base font-bold text-sky-800">Schedule for Day 1</div>
                     <time class="text-xl text-sky-800">
                         {{ $dayjs().format('DD MMM, YYYY') }}
                     </time>
