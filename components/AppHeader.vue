@@ -2,7 +2,7 @@
     <header class="bg-gray-50">
         <div class="lg:mx-52 px-4 py-8 sm:px-6 lg:px-8">
             <div class="max-w-lg overflow-x-hidden">
-                <img src="@/assets/images/Media_1.png" alt="" class="rounded-lg w-96 mb-3" />
+                <!-- <img src="@/assets/images/Media_1.png" alt="" class="rounded-lg w-96 mb-3" /> -->
                 <img
                     class="h-auto max-w-full rounded-lg"
                     src="@/assets/images/Media_1.png"
