@@ -164,7 +164,7 @@ export default {
                 },
                 {
                     title: 'Linux : Introduction to the command line [Hands on]',
-                    subtitle: '(Data transfer, storage, archive and analysis)',
+                    subtitle: '',
                     presenters: 'Nidhan K. Biswas and team',
                     start_time: '2023-07-13 17:30',
                     end_time: '2023-07-13 19:00',
