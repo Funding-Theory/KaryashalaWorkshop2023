@@ -10,7 +10,7 @@
                 >
                     <div class="text-base font-bold text-sky-800">Schedule for Day 2</div>
                     <time class="text-xl text-sky-800">
-                        {{ $dayjs().format('DD MMM, YYYY') }}
+                        {{ $dayjs('2023-07-14').format('DD MMM, YYYY') }}
                     </time>
                 </div>
 
