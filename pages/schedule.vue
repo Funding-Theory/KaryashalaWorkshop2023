@@ -184,6 +184,18 @@ export default {
                     ? 'IN PROGRESS'
                     : 'SCHEDULED'
             })
+            setTimeout(() => {
+                forEach(this.schedule['Day 1'], (d) => {
+                    d.state = this.$dayjs().isBetween(
+                        this.$dayjs(d.start_time),
+                        this.$dayjs(d.end_time),
+                        null,
+                        '[]',
+                    )
+                        ? 'IN PROGRESS'
+                        : 'SCHEDULED'
+                })
+            }, 30000)
         })
     },
 }
