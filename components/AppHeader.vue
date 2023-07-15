@@ -1,7 +1,7 @@
 <template>
     <header class="bg-gray-50">
         <div class="lg:mx-52 px-4 py-8 sm:px-6 lg:px-8">
-            <div class="max-w-lg overflow-x-hidden">
+            <div class="max-w-full overflow-x-hidden">
                 <img
                     class="h-auto max-w-full rounded-lg"
                     src="@/assets/images/Media_1.png"
