@@ -8,7 +8,7 @@
                 <div
                     class="p-4 flex flex-col items-center content-center justify-center w-full rounded-lg bg-sky-100 drop-shadow mb-4 w-full"
                 >
-                    <div class="text-base font-bold text-sky-800">Schedule for Day 2</div>
+                    <div class="text-base font-bold text-sky-800">Schedule for Day 3</div>
                     <time class="text-xl text-sky-800">
                         {{ $dayjs('2023-07-14').format('DD MMM, YYYY') }}
                     </time>
@@ -17,7 +17,7 @@
                 <ol class="relative border-l-2 border-gray-400">
                     <li
                         :key="index"
-                        v-for="(event, index) in schedule['Day 2']"
+                        v-for="(event, index) in schedule['Day 3']"
                         class="mb-6 ml-4 overflow-hidden shadow rounded-lg p-4"
                         :class="{
                             'bg-green-50': event.state == 'IN PROGRESS',
@@ -267,19 +267,123 @@ export default {
                     state: 'SCHEDULED',
                 },
             ],
+            'Day 3': [
+                {
+                    title: '[Hands on] Pre-alignment QC',
+                    subtitle: '(FASTQC, PRINSEQ,... etc)',
+                    presenters: 'Subrata Das and team',
+                    start_time: '2023-07-15 09:00',
+                    end_time: '2023-07-15 10:30',
+                    type: 'EVENT',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands on] Exome Sequence data analysis',
+                    subtitle: '( Alignment, Read Filtering & Post alignment processing)',
+                    presenters: 'Subrata Das and team',
+                    start_time: '2023-07-15 10:30',
+                    end_time: '2023-07-15 12:00',
+                    type: 'EVENT',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tea Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-15 12:00',
+                    end_time: '2023-07-15 12:30',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands on] Exome Sequencing data analysis (cont….)',
+                    subtitle: '(Variant calling and annotation)',
+                    presenters: 'Subrata Das and team',
+                    start_time: '2023-07-15 12:30',
+                    end_time: '2023-07-15 13:30',
+                    type: 'EVENT',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Lunch Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-15 13:30',
+                    end_time: '2023-07-15 14:30',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Analysis of genomic structural alterations',
+                    subtitle: '(Copy Number Variation and Structural Variation)',
+                    presenters: 'Chitrarpita Das',
+                    start_time: '2023-07-15 14:00',
+                    end_time: '2023-07-15 15:00',
+                    type: 'EVENT',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands on] Read and Mutation Visualization',
+                    subtitle:
+                        '(Visualize Sequence, alignment and different types of variants (SNV, INDEL, CNV & SV) through Integrative Genomics Viewer (IGV))',
+                    presenters: 'Arnab Ghosh, Chitrarpita Das and team',
+                    start_time: '2023-07-15 15:00',
+                    end_time: '2023-07-15 17:00',
+                    type: 'EVENT',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tea Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-15 17:00',
+                    end_time: '2023-07-15 17:30',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands on] Additional session on CNV detection',
+                    subtitle:
+                        '(Detection of copy number variants from genome-wide array data, paired-end sequence data)',
+                    presenters: 'Chitrarpita Das and Arnab Ghosh',
+                    start_time: '2023-07-15 17:30',
+                    end_time: '2023-07-15 18:30',
+                    type: 'EVENT',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Dinner',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-15 20:00',
+                    end_time: '',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+            ],
         },
     }),
     components: {},
     methods: {},
     mounted() {
         this.$nextTick(() => {
-            forEach(this.schedule['Day 2'], (d) => {
+            forEach(this.schedule['Day 3'], (d) => {
                 d.state = this.$dayjs().isBetween(this.$dayjs(d.start_time), this.$dayjs(d.end_time), null, '[]')
                     ? 'IN PROGRESS'
                     : 'SCHEDULED'
             })
             setTimeout(() => {
-                forEach(this.schedule['Day 2'], (d) => {
+                forEach(this.schedule['Day 3'], (d) => {
                     d.state = this.$dayjs().isBetween(
                         this.$dayjs(d.start_time),
                         this.$dayjs(d.end_time),
