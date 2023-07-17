@@ -8,16 +8,16 @@
                 <div
                     class="p-4 flex flex-col items-center content-center justify-center w-full rounded-lg bg-sky-100 drop-shadow mb-4 w-full"
                 >
-                    <div class="text-base font-bold text-sky-800">Schedule for Day 3</div>
+                    <div class="text-base font-bold text-sky-800">Schedule for Day 4</div>
                     <time class="text-xl text-sky-800">
-                        {{ $dayjs('2023-07-15').format('DD MMM, YYYY') }}
+                        {{ $dayjs('2023-07-17').format('DD MMM, YYYY') }}
                     </time>
                 </div>
 
                 <ol class="relative border-l-2 border-gray-400">
                     <li
                         :key="index"
-                        v-for="(event, index) in schedule['Day 3']"
+                        v-for="(event, index) in schedule['Day 4']"
                         class="mb-6 ml-4 overflow-hidden shadow rounded-lg p-4"
                         :class="{
                             'bg-green-50': event.state == 'IN PROGRESS',
@@ -371,19 +371,112 @@ export default {
                     state: 'SCHEDULED',
                 },
             ],
+
+            'Day 4': [
+                {
+                    title: '[Hands on] Circos - Mutation and CNV visualization',
+                    subtitle: '',
+                    presenters: 'Arnab Ghosh and team',
+                    start_time: '2023-07-17 09:00',
+                    end_time: '2023-07-17 11:30',
+                    type: 'EVENT',
+                    place: 'Workshop Room',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tea Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-17 11:30',
+                    end_time: '2023-07-17 12:00',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands on] Circos - Mutation and CNV visualization',
+                    subtitle: '',
+                    presenters: 'Arnab Ghosh and team',
+                    start_time: '2023-07-17 12:00',
+                    end_time: '2023-07-17 13:00',
+                    type: 'EVENT',
+                    place: 'Workshop Room',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Lunch Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-17 13:00',
+                    end_time: '2023-07-17 14:00',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands on] Introduction to R',
+                    subtitle: '(Commands, Functions and Case Study: Data Processing through R)',
+                    presenters: 'Diptarup Nandi and team',
+                    start_time: '2023-07-17 14:00',
+                    end_time: '2023-07-17 15:30',
+                    type: 'EVENT',
+                    place: 'Workshop Room',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'External talk (International expert)',
+                    subtitle: '',
+                    presenters: 'Navonil De Sarkar',
+                    start_time: '2023-07-17 15:30',
+                    end_time: '2023-07-17 17:00',
+                    type: 'EVENT',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tea Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-17 17:00',
+                    end_time: '2023-07-17 17:20',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Quiz',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-15 17:20',
+                    end_time: '2023-07-15 17:40',
+                    type: 'BREAK',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands on] Data visualisation through R (Cont.)',
+                    subtitle: '',
+                    presenters: 'Diptarup Nandi and team',
+                    start_time: '2023-07-17 17:40',
+                    end_time: '2023-07-17 19:00',
+                    type: 'EVENT',
+                    place: 'Workshop Room',
+                    state: 'SCHEDULED',
+                },
+            ],
         },
     }),
     components: {},
     methods: {},
     mounted() {
         this.$nextTick(() => {
-            forEach(this.schedule['Day 3'], (d) => {
+            forEach(this.schedule['Day 4'], (d) => {
                 d.state = this.$dayjs().isBetween(this.$dayjs(d.start_time), this.$dayjs(d.end_time), null, '[]')
                     ? 'IN PROGRESS'
                     : 'SCHEDULED'
             })
             setTimeout(() => {
-                forEach(this.schedule['Day 3'], (d) => {
+                forEach(this.schedule['Day 4'], (d) => {
                     d.state = this.$dayjs().isBetween(
                         this.$dayjs(d.start_time),
                         this.$dayjs(d.end_time),
