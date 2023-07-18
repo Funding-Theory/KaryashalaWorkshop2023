@@ -516,9 +516,9 @@ export default {
                     state: 'SCHEDULED',
                 },
                 {
-                    title: 'Tour of the NIBMG facilities and Genome Hall visit',
+                    title: 'Tour of the NIBMG facilities',
                     subtitle: '',
-                    presenters: 'Everyone',
+                    presenters: '',
                     start_time: '2023-07-18 16:00',
                     end_time: '2023-07-18 17:00',
                     type: 'EVENT',
@@ -536,9 +536,9 @@ export default {
                     state: 'SCHEDULED',
                 },
                 {
-                    title: 'Tour of the NIBMG facilities and Genome Hall visit (Cont.)',
+                    title: 'Genome Hall visit',
                     subtitle: '',
-                    presenters: 'Everyone',
+                    presenters: '',
                     start_time: '2023-07-18 17:30',
                     end_time: '2023-07-18 18:30',
                     type: 'EVENT',
