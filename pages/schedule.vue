@@ -17,7 +17,7 @@
                 <ol class="relative border-l-2 border-gray-400">
                     <li
                         :key="index"
-                        v-for="(event, index) in schedule['Day 4']"
+                        v-for="(event, index) in schedule['Day 5']"
                         class="mb-6 ml-4 overflow-hidden shadow rounded-lg p-4"
                         :class="{
                             'bg-green-50': event.state == 'IN PROGRESS',
