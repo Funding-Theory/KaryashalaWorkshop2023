@@ -522,7 +522,7 @@ export default {
                     start_time: '2023-07-18 16:00',
                     end_time: '2023-07-18 17:00',
                     type: 'EVENT',
-                    place: 'Seminar Hall',
+                    place: '',
                     state: 'SCHEDULED',
                 },
                 {
@@ -542,7 +542,7 @@ export default {
                     start_time: '2023-07-18 17:30',
                     end_time: '2023-07-18 18:30',
                     type: 'EVENT',
-                    place: 'Seminar Hall',
+                    place: '',
                     state: 'SCHEDULED',
                 },
             ],
