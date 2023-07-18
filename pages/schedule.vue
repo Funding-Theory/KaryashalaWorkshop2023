@@ -8,9 +8,9 @@
                 <div
                     class="p-4 flex flex-col items-center content-center justify-center w-full rounded-lg bg-sky-100 drop-shadow mb-4 w-full"
                 >
-                    <div class="text-base font-bold text-sky-800">Schedule for Day 4</div>
+                    <div class="text-base font-bold text-sky-800">Schedule for Day 5</div>
                     <time class="text-xl text-sky-800">
-                        {{ $dayjs('2023-07-17').format('DD MMM, YYYY') }}
+                        {{ $dayjs('2023-07-18').format('DD MMM, YYYY') }}
                     </time>
                 </div>
 
@@ -464,19 +464,101 @@ export default {
                     state: 'SCHEDULED',
                 },
             ],
+            'Day 5': [
+                {
+                    title: 'Introduction to RNA-sequencing data analysis',
+                    subtitle: '',
+                    presenters: 'Analabha Basu',
+                    start_time: '2023-07-18 09:00',
+                    end_time: '2023-07-18 11:00',
+                    type: 'EVENT',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tea Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-18 11:00',
+                    end_time: '2023-07-18 11:30',
+                    type: 'BREAK',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands on] RNA-sequencing data analysis',
+                    subtitle: '',
+                    presenters: 'Arnab Ghosh and team',
+                    start_time: '2023-07-18 11:30',
+                    end_time: '2023-07-18 13:30',
+                    type: 'EVENT',
+                    place: 'Workshop Room',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Lunch Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-18 13:30',
+                    end_time: '2023-07-18 14:30',
+                    type: 'BREAK',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Introduction to Methylation data analysis',
+                    subtitle: '',
+                    presenters: 'Souvik Chakravarty and team',
+                    start_time: '2023-07-18 15:00',
+                    end_time: '2023-07-18 16:00',
+                    type: 'EVENT',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tour of the NIBMG facilities and Genome Hall visit',
+                    subtitle: '',
+                    presenters: 'Everyone',
+                    start_time: '2023-07-18 16:00',
+                    end_time: '2023-07-18 17:00',
+                    type: 'EVENT',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tea Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-18 17:00',
+                    end_time: '2023-07-18 17:30',
+                    type: 'BREAK',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tour of the NIBMG facilities and Genome Hall visit (Cont.)',
+                    subtitle: '',
+                    presenters: 'Everyone',
+                    start_time: '2023-07-18 17:30',
+                    end_time: '2023-07-18 18:30',
+                    type: 'EVENT',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+            ],
         },
     }),
     components: {},
     methods: {},
     mounted() {
         this.$nextTick(() => {
-            forEach(this.schedule['Day 4'], (d) => {
+            forEach(this.schedule['Day 5'], (d) => {
                 d.state = this.$dayjs().isBetween(this.$dayjs(d.start_time), this.$dayjs(d.end_time), null, '[]')
                     ? 'IN PROGRESS'
                     : 'SCHEDULED'
             })
             setTimeout(() => {
-                forEach(this.schedule['Day 4'], (d) => {
+                forEach(this.schedule['Day 5'], (d) => {
                     d.state = this.$dayjs().isBetween(
                         this.$dayjs(d.start_time),
                         this.$dayjs(d.end_time),
