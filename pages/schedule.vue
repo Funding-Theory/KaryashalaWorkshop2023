@@ -502,7 +502,7 @@ export default {
                     start_time: '2023-07-18 13:30',
                     end_time: '2023-07-18 14:30',
                     type: 'BREAK',
-                    place: 'Seminar Hall',
+                    place: '',
                     state: 'SCHEDULED',
                 },
                 {
