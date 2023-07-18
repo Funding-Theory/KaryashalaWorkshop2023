@@ -512,7 +512,7 @@ export default {
                     start_time: '2023-07-18 15:00',
                     end_time: '2023-07-18 16:00',
                     type: 'EVENT',
-                    place: 'Seminar Hall',
+                    place: 'Workshop Room',
                     state: 'SCHEDULED',
                 },
                 {
