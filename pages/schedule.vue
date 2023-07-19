@@ -590,7 +590,7 @@ export default {
                 {
                     title: 'Cloud computing',
                     subtitle: '',
-                    presenters: 'SD, AKS',
+                    presenters: 'Subrata Das, Animesh Kumar Singh',
                     start_time: '2023-07-19 14:00',
                     end_time: '2023-07-19 15:00',
                     type: 'EVENT',
@@ -630,7 +630,7 @@ export default {
                 {
                     title: 'Comments from Participants on the Workshop and Wrap-up Session',
                     subtitle: 'Certificate Distribution',
-                    presenters: 'Director, NKB, Analabha Basu and Everyone',
+                    presenters: '',
                     start_time: '2023-07-19 17:45',
                     end_time: '2023-07-19 18:45',
                     type: 'EVENT',
