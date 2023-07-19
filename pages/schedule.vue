@@ -8,16 +8,16 @@
                 <div
                     class="p-4 flex flex-col items-center content-center justify-center w-full rounded-lg bg-sky-100 drop-shadow mb-4 w-full"
                 >
-                    <div class="text-base font-bold text-sky-800">Schedule for Day 5</div>
+                    <div class="text-base font-bold text-sky-800">Schedule for Day 6</div>
                     <time class="text-xl text-sky-800">
-                        {{ $dayjs('2023-07-18').format('DD MMM, YYYY') }}
+                        {{ $dayjs('2023-07-19').format('DD MMM, YYYY') }}
                     </time>
                 </div>
 
                 <ol class="relative border-l-2 border-gray-400">
                     <li
                         :key="index"
-                        v-for="(event, index) in schedule['Day 5']"
+                        v-for="(event, index) in schedule['Day 6']"
                         class="mb-6 ml-4 overflow-hidden shadow rounded-lg p-4"
                         :class="{
                             'bg-green-50': event.state == 'IN PROGRESS',
@@ -546,19 +546,121 @@ export default {
                     state: 'SCHEDULED',
                 },
             ],
+            'Day 6': [
+                {
+                    title: 'Genetic Epidemiology',
+                    subtitle: '',
+                    presenters: 'Analabha Basu',
+                    start_time: '2023-07-19 09:00',
+                    end_time: '2023-07-19 11:00',
+                    type: 'EVENT',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tea Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-19 11:00',
+                    end_time: '2023-07-19 11:30',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: '[Hands On] Session on Genetic Epidemiology',
+                    subtitle: '',
+                    presenters: 'Diptarup Nandi, Chandrika Bhattacharya and team',
+                    start_time: '2023-07-19 11:30',
+                    end_time: '2023-07-19 13:00',
+                    type: 'EVENT',
+                    place: 'Workshop Room',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Lunch Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-19 13:00',
+                    end_time: '2023-07-19 14:00',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Cloud computing',
+                    subtitle: '',
+                    presenters: 'SD, AKS',
+                    start_time: '2023-07-19 14:00',
+                    end_time: '2023-07-19 15:00',
+                    type: 'EVENT',
+                    place: 'Workshop Room',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'External talk (National expert)',
+                    subtitle: '',
+                    presenters: 'Divya Tej Sowpati',
+                    start_time: '2023-07-19 15:00',
+                    end_time: '2023-07-19 17:00',
+                    type: 'EVENT',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Quiz',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-19 17:30',
+                    end_time: '2023-07-19 17:45',
+                    type: 'BREAK',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Tea Break',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-19 17:30',
+                    end_time: '2023-07-19 17:45',
+                    type: 'BREAK',
+                    place: '',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Comments from Participants on the Workshop and Wrap-up Session',
+                    subtitle: 'Certificate Distribution',
+                    presenters: 'Director, NKB, Analabha Basu and Everyone',
+                    start_time: '2023-07-19 17:45',
+                    end_time: '2023-07-19 18:45',
+                    type: 'EVENT',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+                {
+                    title: 'Gala Dinner',
+                    subtitle: '',
+                    presenters: '',
+                    start_time: '2023-07-19 19:30',
+                    end_time: '2023-07-19 22:30',
+                    type: 'BREAK',
+                    place: 'Seminar Hall',
+                    state: 'SCHEDULED',
+                },
+            ],
         },
     }),
     components: {},
     methods: {},
     mounted() {
         this.$nextTick(() => {
-            forEach(this.schedule['Day 5'], (d) => {
+            forEach(this.schedule['Day 6'], (d) => {
                 d.state = this.$dayjs().isBetween(this.$dayjs(d.start_time), this.$dayjs(d.end_time), null, '[]')
                     ? 'IN PROGRESS'
                     : 'SCHEDULED'
             })
             setTimeout(() => {
-                forEach(this.schedule['Day 5'], (d) => {
+                forEach(this.schedule['Day 6'], (d) => {
                     d.state = this.$dayjs().isBetween(
                         this.$dayjs(d.start_time),
                         this.$dayjs(d.end_time),
