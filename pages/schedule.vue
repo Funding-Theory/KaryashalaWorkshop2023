@@ -644,7 +644,7 @@ export default {
                     start_time: '2023-07-19 19:30',
                     end_time: '2023-07-19 22:30',
                     type: 'BREAK',
-                    place: 'Seminar Hall',
+                    place: '',
                     state: 'SCHEDULED',
                 },
             ],
